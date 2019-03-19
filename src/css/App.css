@@ -1,0 +1,55 @@
+.row, .container, .App, .col-lg-6 {
+  height: 100vh;
+}
+
+.iOS {
+  position: relative;
+  border: 1px solid #000;
+  left: 10%;
+  margin-top: -80px;
+}
+
+.android {
+  position: absolute;
+  border: 1px solid #000;
+  left: 20%;
+  top: 23%;
+}
+
+.col-lg-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.auth {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.auth-content {
+  width: 500px !important;
+  padding: 16px;
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+
+.main-description {
+  color: #999;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  padding: 4px;
+}
+
+.name {
+  font-family: Instagram, sans-serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Instagram";
+  src: url(../Billabong.ttf);
+}

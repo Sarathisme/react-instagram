@@ -6,11 +6,33 @@ class App extends Component {
     constructor(props) {
         super(props);
 
+        this.onSuccess = this.onSuccess.bind(this);
         this.onFailure = this.onFailure.bind(this);
     }
 
     onSuccess(response) {
-        console.log(response);
+        fetch(`${process.env.REACT_APP_API_URL}/users/auth`, {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            mode: "cors",
+            body: JSON.stringify({
+                id: response.id,
+                name:response.name,
+                photo: `https://graph.facebook.com/${response.id}/picture?type=normal`
+            }),
+        }).then(response => {
+            response.json().then(data => {
+                if(data.message === "success") {
+
+                } else {
+                    alert("Something's wrong! Please try again later.")
+                }
+            });
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     onFailure(error) {

@@ -13,6 +13,10 @@
     height: 76px !important;
 }
 
+.nav-content-left {
+    padding-top: 2px;
+}
+
 .col-lg-3 > img {
     margin-right: 12px;
 }
@@ -61,7 +65,7 @@
     align-items: center;
     justify-content: center;
     text-align: end;
-    margin-top: -30px;
+    margin-top: -32px;
 }
 
 .fa-sign-out-alt {

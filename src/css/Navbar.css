@@ -1,0 +1,77 @@
+.nav-bar {
+    background-color: white;
+    padding: 16px 20px;
+    border: 1px solid #e6e6e6;
+    height: 76px !important;
+}
+
+.nav-bar-content, .nav-bar-row {
+    height: 76px !important;
+}
+
+.nav-content-left, .nav-content-middle {
+    height: 76px !important;
+}
+
+.col-lg-3 > img {
+    margin-right: 12px;
+}
+
+.dashboard-name {
+    text-align: start !important;
+    font-size: 32px !important;
+    padding-top: 2px;
+}
+
+#divider {
+    background-color: #000;
+    width: 1px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+.nav-content-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -17px;
+}
+
+.form-control {
+    width: 200px;
+    height: 24px;
+    background-color: #f2f2f2;
+    padding: 12px 4px 14px 4px;
+}
+
+.form-control::placeholder {
+    text-align: center;
+    font-weight: 500;
+    font-family: 'FontAwesome', sans-serif;
+}
+
+.nav-content-left {
+    display: flex;
+    align-items: flex-start;
+}
+
+.nav-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    margin-top: -30px;
+}
+
+.fa-sign-out-alt {
+    font-size: 28px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .nav-content-middle {
+        display: none;
+        padding: 0 !important;
+    }
+}

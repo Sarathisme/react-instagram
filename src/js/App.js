@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import {GoogleLogin} from "react-google-login";
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 
 class App extends Component {
     constructor(props) {
         super(props);
 
-        this.onSuccess = this.onSuccess.bind(this);
         this.onFailure = this.onFailure.bind(this);
     }
 
     onSuccess(response) {
-
+        console.log(response);
     }
 
     onFailure(error) {
@@ -32,6 +31,18 @@ class App extends Component {
                             <div className="auth-content">
                                 <h1 className="name">Instagram</h1>
                                 <h6 className="main-description text-muted">Sign up to see photos and videos<br/> from your friends</h6>
+                                <FacebookLogin
+                                    appId={process.env.REACT_APP_CLIENT_ID}
+                                    autoLoad={true}
+                                    render={renderProps => (
+                                        <div className='facebook-button-div'>
+                                            <button className="facebook-button" onClick={renderProps.onClick}>
+                                                <span className="facebook-icon-div"><i className="fab fa-facebook-f"/></span>
+                                                Login with Facebook
+                                            </button>
+                                        </div>
+                                    )}
+                                    callback={this.onSuccess}/>
                             </div>
                         </div>
                     </div>

@@ -6,11 +6,13 @@
     "@material/fab": "^1.0.1",
     "@material/react-fab": "^0.11.0",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.6",
     "react-cookie": "^3.0.8",
     "react-dom": "^16.8.4",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.2",
     "react-mdc-web": "^0.17.0",
+    "react-modal": "^3.8.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },

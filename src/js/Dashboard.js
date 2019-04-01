@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 import '../css/Dashboard.css';
 import FabIcon from "./FabIcon";
 import Feed from './Feed';

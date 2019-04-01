@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
 import {withCookies} from "react-cookie";
-import '../css/Navbar.css';
+import '../css/NavBar.css';
 
-class Navbar extends Component{
+class NavBar extends Component{
 
     logout(response) {
-
-    }
-
-    addPost() {
 
     }
 
@@ -35,4 +31,4 @@ class Navbar extends Component{
     }
 }
 
-export default withCookies(Navbar);
+export default withCookies(NavBar);

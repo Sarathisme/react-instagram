@@ -7,3 +7,11 @@
     bottom: 48px;
     right: 48px;
 }
+
+#description {
+    width: 100%;
+    margin-top: 6px;
+    padding: 6px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+}

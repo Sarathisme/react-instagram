@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09f3b221-faa4-404e-8145-7de618228b5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/temp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/Post.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/Feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Feed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Navbar.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +22,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/Feed.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/Post.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -32,8 +40,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/Feed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="420">
+              <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/Post.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -89,9 +109,11 @@
         <option value="$PROJECT_DIR$/src/css/fab-icon.css" />
         <option value="$PROJECT_DIR$/src/js/FabIcon.js" />
         <option value="$PROJECT_DIR$/src/js/Dashboard.js" />
-        <option value="$PROJECT_DIR$/src/css/Feed.css" />
         <option value="$PROJECT_DIR$/src/js/Navbar.js" />
         <option value="$PROJECT_DIR$/src/css/Navbar.css" />
+        <option value="$PROJECT_DIR$/src/css/Feed.css" />
+        <option value="$PROJECT_DIR$/src/css/Post.css" />
+        <option value="$PROJECT_DIR$/src/js/Post.js" />
         <option value="$PROJECT_DIR$/src/js/Feed.js" />
       </list>
     </option>
@@ -213,7 +235,7 @@
       <workItem from="1552990636146" duration="8206000" />
       <workItem from="1553053175247" duration="21823000" />
       <workItem from="1553140120618" duration="261000" />
-      <workItem from="1554093992641" duration="6558000" />
+      <workItem from="1554093992641" duration="7936000" />
     </task>
     <task id="LOCAL-00001" summary="Initial setup complete.">
       <created>1553000720924</created>
@@ -257,11 +279,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554099767196</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Feed UI complete. Have to add it to the list.">
+      <created>1554101876641</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554101876641</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37429000" />
+    <option name="totallyTimeSpent" value="38807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -298,7 +327,8 @@
     <MESSAGE value="Navbar complete." />
     <MESSAGE value="Added Plus button." />
     <MESSAGE value="Basic Feed and Card layout complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Feed and Card layout complete." />
+    <MESSAGE value="Feed UI complete. Have to add it to the list." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feed UI complete. Have to add it to the list." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
@@ -457,13 +487,6 @@
     <entry file="file://$PROJECT_DIR$/public/temp.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/Feed.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/Navbar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -481,10 +504,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/Feed.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/Post.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/Feed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="420">
+          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

@@ -14,12 +14,34 @@ class Feed extends Component {
                 post: process.env.PUBLIC_URL+'/temp.jpg',
                 name: "sarath_sattiraju",
                 description: "This is a dummy text"
-            }]
+            },
+                {
+                    profile: process.env.PUBLIC_URL+'/favicon.ico',
+                    post: process.env.PUBLIC_URL+'/temp.jpg',
+                    name: "sarath_sattiraju",
+                    description: "This is a dummy text"
+                }]
         }
     }
 
     componentWillMount() {
-
+        fetch('http://localhost:9000/posts/get', {
+            'method': 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            mode: "cors",
+        }).then(response => {
+            response.json().then(data => {
+                const posts = this.state.posts.slice();
+                posts.push(data.posts);
+                this.setState({
+                   posts: posts
+                });
+            });
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     render() {

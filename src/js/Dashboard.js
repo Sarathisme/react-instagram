@@ -1,14 +1,16 @@
 import React, {Component} from "react";
 import Navbar from "./Navbar";
-import {Fab} from "@material/react-fab";
-import '@material/react-fab/dist/fab.css';
+import '../css/Dashboard.css';
+import FabIcon from "./FabIcon";
+import Feed from './Feed';
 
 class Dashboard extends Component {
     render() {
         return (
             <div>
                 <Navbar/>
-                <Fab icon={<span className="material-icons"><i className="fas fa-plus-circle"/></span>}/>
+                <FabIcon/>
+                <Feed/>
             </div>
         );
     }

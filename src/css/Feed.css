@@ -1,0 +1,58 @@
+.news-feed {
+    height: 100vh !important;
+    padding-top: 90px;
+}
+
+.feed-card {
+    margin: 2rem 12rem;
+}
+
+.profile-card {
+}
+
+.profile-image {
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin: 0;
+    font-weight: bold;
+    padding: 18px 4px;
+    display: inline-block;
+}
+
+.posted-image {
+    width: 614px;
+    height: 614px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-info {
+    background-color: white;
+}
+
+.card-footer {
+    padding: 16px;
+}
+
+.info-name {
+    margin: 0;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+.post-data {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 4px;
+}
+
+hr {
+    margin: 0;
+}

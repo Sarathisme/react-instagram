@@ -23,7 +23,7 @@ class Navbar extends Component{
                             <h1 className="name dashboard-name">Instagram</h1>
                         </div>
                         <div className="col-lg-6 nav-content-middle">
-                            <input type="text" className='form-control form-control-sm' placeholder="Search"/>
+                            <input type="text" className='search form-control form-control-sm' placeholder="Search"/>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6 nav-content-right">
                             <i className="fas fa-sign-out-alt" onClick={this.logout}/>

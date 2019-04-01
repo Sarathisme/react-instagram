@@ -5,6 +5,7 @@
     padding: 16px 20px;
     border: 1px solid #e6e6e6;
     height: 76px !important;
+    z-index: 9999;
 }
 
 .nav-bar-content, .nav-bar-row {
@@ -75,9 +76,28 @@
 }
 
 
-@media screen and (max-width: 992px) {
-    .nav-content-middle {
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .search {
         display: none;
         padding: 0 !important;
+    }
+
+    .nav-content-right {
+        left: 256px;
+        top: -96px;
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search {
+        display: none;
+        padding: 0 !important;
+    }
+
+    .nav-content-right {
+        top: -92px;
+        left: 16px;
+        display: inline;
     }
 }

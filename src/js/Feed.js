@@ -15,17 +15,17 @@ class Feed extends Component {
                 name: "sarath_sattiraju",
                 description: "This is a dummy text"
             },
-                {
-                    profile: process.env.PUBLIC_URL+'/favicon.ico',
-                    post: process.env.PUBLIC_URL+'/temp.jpg',
-                    name: "sarath_sattiraju",
-                    description: "This is a dummy text"
-                }]
+            {
+                profile: process.env.PUBLIC_URL+'/favicon.ico',
+                post: process.env.PUBLIC_URL+'/temp.jpg',
+                name: "sarath_sattiraju",
+                description: "This is a dummy text"
+            }]
         }
     }
 
     componentWillMount() {
-        fetch('http://localhost:9000/posts/get', {
+        fetch(process.env.REACT_APP_API_URL + '/posts/get', {
             'method': 'post',
             headers: {
                 'content-type': 'application/json'

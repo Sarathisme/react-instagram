@@ -1,15 +1,13 @@
 import React, {Component} from "react";
-import Navbar from "./NavBar";
+import NavBar from "./NavBar";
 import '../css/Dashboard.css';
-import FabIcon from "./FabIcon";
 import Feed from './Feed';
 
 class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
-                <FabIcon/>
+                <NavBar/>
                 <Feed/>
             </div>
         );

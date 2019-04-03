@@ -43,7 +43,6 @@ class NavBar extends Component{
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 nav-content-right" align="right">
                                 <i className="far fa-times-circle" onClick={this.logout}/>
-                                <i className="far fa-user-circle"/>
                                 <AddIcon/>
                             </div>
                         </div>

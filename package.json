@@ -17,7 +17,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "HTTPS=true react-scripts start",
+    "start": "REACT_APP_API_URL=https://instagram-clone-node.herokuapp.com REACT_APP_CLIENT_ID=406181866614837 HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -10,10 +10,13 @@ class NavBar extends Component{
         super(props);
 
         this.state = {
-            logout: false
+            logout: false,
+            profile: false
         };
 
         this.logout = this.logout.bind(this);
+        this.profile = this.profile.bind(this);
+        this.feed = this.profile.bind(this);
     }
 
     logout() {
@@ -25,13 +28,35 @@ class NavBar extends Component{
         });
     }
 
+    profile() {
+
+        if(this.state.profile) {
+            this.setState({
+                profile: false
+            });
+        } else {
+            this.setState({
+                profile: true
+            });
+        }
+
+        this.props.isProfile(this.state.profile);
+    }
+
     render() {
         if(this.state.logout) {
             return(
                 <Redirect to='/'/>
             );
         } else {
-            return (
+            let icon;
+            if(!this.state.profile) {
+                icon = <i className="fas fa-user-alt" onClick={this.profile}/>;
+            } else {
+                icon = <i className="far fa-newspaper" onClick={this.profile}/>;
+            }
+
+            return(
                 <div className='nav-bar'>
                     <div className='container nav-bar-content'>
                         <div className="container row nav-bar-row">
@@ -42,6 +67,7 @@ class NavBar extends Component{
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 nav-content-right" align="right">
                                 <i className="far fa-times-circle" onClick={this.logout}/>
+                                {icon}
                                 <AddIcon refresh={this.props.refresh}/>
                             </div>
                         </div>

@@ -9,25 +9,32 @@ class Dashboard extends Component {
         super(props);
 
         this.state = {
-            "refresh": false
+            "refresh": false,
+            "profile": false
         };
 
         this.refreshFeed = this.refreshFeed.bind(this);
+        this.isProfile = this.isProfile.bind(this);
     }
 
     refreshFeed() {
         this.setState({
             refresh: true
         });
+    }
 
-        alert("here");
+    isProfile(flag) {
+        this.setState({
+           "refresh": true,
+           "profile": flag
+        });
     }
 
     render() {
         return (
             <div>
-                <NavBar refresh={this.refreshFeed}/>
-                <Feed refresh={this.state.refresh}/>
+                <NavBar refresh={this.refreshFeed} isProfile={this.isProfile}/>
+                <Feed refresh={this.state.refresh} profile={this.state.profile}/>
             </div>
         );
     }

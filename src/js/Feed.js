@@ -13,9 +13,11 @@ class Feed extends Component {
         };
 
         this.refreshFeed = this.refreshFeed.bind(this);
+        this.getFeed = this.getFeed.bind(this);
+        this.getProfile = this.getProfile.bind(this);
     }
 
-    refreshFeed() {
+    getFeed() {
         fetch(process.env.REACT_APP_API_URL + '/posts/get', {
             'method': 'post',
             headers: {
@@ -44,15 +46,57 @@ class Feed extends Component {
         });
     }
 
+    getProfile(id) {
+        fetch(process.env.REACT_APP_API_URL + '/posts/user', {
+            'method': 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id
+            }),
+            mode: "cors",
+        }).then(response => {
+            response.json().then(data => {
+                const results = [];
+                const posts = data.posts.slice();
+                posts.forEach((post, i) => {
+                    results.push({
+                        post: post.image,
+                        description: post.description,
+                        name: post.user[0].name,
+                        profile: post.user[0].photo
+                    });
+                });
+
+                this.setState({
+                    posts: results.reverse()
+                });
+            });
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    refreshFeed(id) {
+        if(id !== -1) {
+            this.getProfile(id);
+        } else {
+            this.getFeed();
+        }
+    }
+
     componentWillReceiveProps(nextProps, nextContext) {
-        console.log("here too", nextProps.refresh);
-        if(nextProps.refresh) {
-            this.refreshFeed();
+        if(nextProps.refresh && nextProps.profile) {
+            const {cookies} = this.props;
+            this.refreshFeed(cookies.get('insta-id'));
+        } else {
+            this.refreshFeed(-1);
         }
     }
 
     componentWillMount() {
-        this.refreshFeed();
+        this.refreshFeed(-1);
     }
 
     render() {

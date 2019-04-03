@@ -12,7 +12,7 @@ class Post extends Component {
                     <hr/>
                 </div>
                 <div className="card-body">
-                    <img src={this.props.post} className="posted-image" alt="Posted"/>
+                    <img src={this.props.post} height="612" className="posted-image" alt="Posted"/>
                 </div>
                 <div className='card-footer card-info'>
                     <span className="info-name">{this.props.name}</span>

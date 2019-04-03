@@ -50,6 +50,7 @@ class AddIcon extends Component {
 
         formData.append('imageFile', this.state.files[0]);
         formData.append('id', cookies.get('insta-id'));
+        formData.append('description', this.state.description);
 
         fetch(process.env.REACT_APP_API_URL + '/posts/post', {
             method: 'post',
@@ -58,6 +59,7 @@ class AddIcon extends Component {
         }).then(response => {
             response.json().then(data => {
                this.handleClose();
+               this.props.refresh();
             });
         }).catch(error => {
             console.log(error);

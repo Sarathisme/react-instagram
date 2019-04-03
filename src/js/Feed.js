@@ -9,22 +9,13 @@ class Feed extends Component {
         super(props);
 
         this.state= {
-            posts: [{
-                profile: process.env.PUBLIC_URL+'/favicon.ico',
-                post: process.env.PUBLIC_URL+'/temp.jpg',
-                name: "sarath_sattiraju",
-                description: "This is a dummy text"
-            },
-            {
-                profile: process.env.PUBLIC_URL+'/favicon.ico',
-                post: process.env.PUBLIC_URL+'/temp.jpg',
-                name: "sarath_sattiraju",
-                description: "This is a dummy text"
-            }]
-        }
+            posts: []
+        };
+
+        this.refreshFeed = this.refreshFeed.bind(this);
     }
 
-    componentWillMount() {
+    refreshFeed() {
         fetch(process.env.REACT_APP_API_URL + '/posts/get', {
             'method': 'post',
             headers: {
@@ -36,20 +27,32 @@ class Feed extends Component {
                 const results = [];
                 const posts = data.posts.slice();
                 posts.forEach((post, i) => {
-                   results.push({
-                       post: post.image,
-                       description: post.description,
-                       name: post.user[0].name,
-                       profile: post.user[0].photo
-                   });
+                    results.push({
+                        post: post.image,
+                        description: post.description,
+                        name: post.user[0].name,
+                        profile: post.user[0].photo
+                    });
                 });
+
                 this.setState({
-                   posts: results
+                    posts: results.reverse()
                 });
             });
         }).catch(error => {
             console.log(error);
         });
+    }
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        console.log("here too", nextProps.refresh);
+        if(nextProps.refresh) {
+            this.refreshFeed();
+        }
+    }
+
+    componentWillMount() {
+        this.refreshFeed();
     }
 
     render() {

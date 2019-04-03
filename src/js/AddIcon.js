@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {withCookies} from "react-cookie";
 import {Modal, Button} from 'react-bootstrap';
-import '../css/FabIcon.css';
+import '../css/AddIcon.css';
 
 class AddIcon extends Component {
 

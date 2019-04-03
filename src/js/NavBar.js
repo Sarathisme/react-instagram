@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {withCookies} from "react-cookie";
 import '../css/NavBar.css';
 import {Redirect} from 'react-router-dom';
-import AddIcon from "./Dashboard";
+import AddIcon from "./AddIcon";
 
 class NavBar extends Component{
 

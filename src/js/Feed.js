@@ -33,10 +33,18 @@ class Feed extends Component {
             mode: "cors",
         }).then(response => {
             response.json().then(data => {
-                const posts = this.state.posts.slice();
-                posts.push(data.posts);
+                const results = [];
+                const posts = data.posts.slice();
+                posts.forEach((post, i) => {
+                   results.push({
+                       post: post.image,
+                       description: post.description,
+                       name: post.user[0].name,
+                       profile: post.user[0].photo
+                   });
+                });
                 this.setState({
-                   posts: posts
+                   posts: results
                 });
             });
         }).catch(error => {

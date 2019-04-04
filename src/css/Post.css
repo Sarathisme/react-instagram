@@ -20,8 +20,8 @@
 }
 
 .posted-image {
-    max-width: 612px;
-    max-height: 612px;
+    max-width: 100%;
+    max-height: 100%;
     display:block;
     margin:auto;
 }
